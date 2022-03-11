@@ -20,5 +20,5 @@ while [ true ]; do
 
 	git push
 
-	echo $'Change has been pushed! \n\n'
+	echo $'Change has been pushed! \n'
 done
