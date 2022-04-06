@@ -38,40 +38,35 @@ namespace Jay_Bee_s_Food_Store
         private void ButtonSubmit_Click(object sender, EventArgs e)
         {
 
-          String allowedName = @"^.*[a-zA-Z]"; 
-          String allowedEmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,})+)$";
-          String allowedPword = "^(?=.*?[A - Z])(?=.*?[a - z])(?=.*?[0 - 9])(?=.*?[#?!@$ %^&*-]).{8,}$";
+          String allowedName = @"^.*[a-zA-Z]"; // Regex expression that the textboxes have to include with these patterns.
+          String allowedEmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,})+)$"; // Regex expression that the textbox must include these patterns.
 
-            if (!Regex.IsMatch(firstNameTextBox.Text, allowedName))
+            if (!Regex.IsMatch(firstNameTextBox.Text, allowedName)) // Must match this expression.
             {
                MessageBox.Show("Customer First Name is empty or invalid.");
                return;
             }
 
-            if(!Regex.IsMatch(lastNameTextBox.Text, allowedName))
+            if(!Regex.IsMatch(lastNameTextBox.Text, allowedName)) // Must match this expression.
             {
                MessageBox.Show("Customer Last Name is empty or invalid.");
                return;
             }
 
-            if(!Regex.IsMatch(emailTextBox.Text, allowedEmail))
+            if(!Regex.IsMatch(emailTextBox.Text, allowedEmail)) // Must match this expression.
             {
                 MessageBox.Show("Customer Email is empty or invalid.");
                 return;
             }
-            if(!Regex.IsMatch(pwordTextBox.Text, allowedPword))
-            {
-                MessageBox.Show("Customer Password is empty or invalid.");
-            }
-
-            if (ButtonSubmit.Text == "Submit")
+ 
+            if (ButtonSubmit.Text == "Submit") // When clicking the button that has "Submit", do this.
             {
                 ValidateAddCustomer customer = new ValidateAddCustomer(firstNameTextBox.Text.Trim(), lastNameTextBox.Text.Trim(), emailTextBox.Text.Trim(), pwordTextBox.Text.Trim());
                 CallCustomerDB.addCustomer(customer);
                 CustomerClear();
             }
 
-          _parent.CustomerView();
+          _parent.CustomerView(); // Back to ManagerControl
         }
 
     }

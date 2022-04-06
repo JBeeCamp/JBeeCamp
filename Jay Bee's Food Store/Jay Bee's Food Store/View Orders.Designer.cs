@@ -39,9 +39,9 @@
             this.OrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LocationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrderView)).BeginInit();
@@ -138,9 +138,9 @@
             this.OrderID,
             this.OrderDate,
             this.Quantity,
+            this.ProductID,
             this.CustomerID,
-            this.LocationID,
-            this.ProductID});
+            this.LocationID});
             this.dataGridOrderView.Location = new System.Drawing.Point(74, 59);
             this.dataGridOrderView.MultiSelect = false;
             this.dataGridOrderView.Name = "dataGridOrderView";
@@ -174,6 +174,14 @@
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
             // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.HeaderText = "ProductID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
+            this.ProductID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // CustomerID
             // 
             this.CustomerID.DataPropertyName = "CustomerID";
@@ -189,14 +197,6 @@
             this.LocationID.Name = "LocationID";
             this.LocationID.ReadOnly = true;
             this.LocationID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.HeaderText = "ProductID";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.ReadOnly = true;
-            this.ProductID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ViewOrders
             // 
@@ -231,8 +231,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderID;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn LocationID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
     }
 }
